@@ -1,161 +1,205 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Forms in HTML</title>
-    </head>
-    <body>
-        <form>
-            <fieldset>
-                <fieldset>
-                <legend>
-                    Personal Information
-                </legend>
-                <label>Enter Your Name</label>
-                <br>
-                <input type="text">
-                <br>
-                <label>Enter Your Email</label>
-                <br>
-                <input type="email">
-                <br>
-                <label>Enter Your Phone Number</label>
-                <br>
-                <input type="number">
-                <br>
-                <label>Enter Your Address</label>
-                <br>
-                <input type="text">
-                <br>
-                <label> Select Your Gender</label>
-                <br>
-                <input type="radio" name="Gender"
-                value="Male"/>Male
-                <br>
-            <input type="radio" name="Gender"
-                value="Female"/>Female
-                <br>
-                <input type="radio" name="Gender"
-                value="Other"/>Other
-                <br>
-                <label>Select Your Country</label>
-                <br>
-                <input type="radio" name="Country"
-                value="India"/>India
-                <br>
-                <input type="radio" name="Country"
-                value="USA"/>USA
-                <br>
-                <input type="radio" name="Country"
-                value="UK"/>UK
-                <br>
-                <input type="radio" name="Country"
-                value="Other"/>Other
-                <br>
-                <label>Skills</label>
-                <br>
-                <input type="checkbox" name="Cooking"
-                value="Cooking"/>Cooking
-                <br>
-             <input type="checkbox" name="Coding"
-                value="Coding"/>Coding
-                <br>
-                <input type="checkbox" name="Painting"
-                value="Painting"/>Painting
-                <br>
-                <input type="checkbox" name="Dancing"
-                value="Dancing"/>Dancing
-                <br>
-                 <input type="checkbox" name="Singing"
-                value="Singing"/>Singing
-                <br>
-                <label>Select your blood type</label>
-                <select>
-                    <option>A+</option>
-                    <option>A-</option>
-                    <option>B+</option>
-                    <option>B-</option>
-                    <option>O+</option>
-                    <option>O-</option>
-                    <option>AB+</option>
-                    <option>AB-</option>
-                </select>
-                <br>
-                <label>Password</label>
-                <input type="password">
-                <br>
-                <input type="submit" value="Submit">
-            </fieldset>
-            <fieldset>
-                <legend>
-                    Academic Details
-                </legend>
-                <label>Select Your Grade</label>
-                <br>
-                <select>
-                    <option>Grade 1</option>
-                    <option>Grade 2</option>
-                    <option>Grade 3</option>
-                    <option>Grade 4</option>
-                    <option>Grade 5</option>
-                    <option>Grade 6</option>
-                    <option>Grade 7</option>
-                    <option>Grade 8</option>
-                    <option>Grade 9</option>
-                    <option>Grade 10</option>
-                    <option>Grade 11</option>
-                    <option>Grade 12</option>
-                </select>
-                <br>
-                <label>Enter Your School Name</label>
-                <br>
-                <input type="text">
-                <br>
-                <label> Select Your Club Choice</label>
-                <br>
-                <input type="radio" name="Club"
-                value="Science"/>Science
-                <br>
-            <input type="radio" name="Club"
-                value="Maths"/>Maths
-                <br>
-                <input type="radio" name="Club"
-                value="Sports"/>Sports
-                <br>
-                <input type="radio" name="Club"
-                value="Arts"/>Arts
-                <br>
-                <input type="radio" name="Club"
-                value="Music"/>Music
-                <br>
-                <label>Enter Your Favorite Subject</label>
-                <br>
-                <input type="text">
-                <br>
-                <label>Enter Your Hobbies</label>
-                <br>
-                <input type="text">
-                <br>
-            </fieldset>
-            <fieldset>
-                <legend>
-                    Other Information
-                </legend>
-                <label>Select Your Favorite Color</label>
-                <br>
-                <input type="color">
-                <br>
-                <label>Select Date of Birth</label>
-                <br>
-                <input type="date">
-                <br>
-                <label>How Many People In Your Family</label>
-                <br>
-                <input type="number">
-                <br>
-                <label>Do You Have any Pets</label>
-                <br>
-                <input type="text">
-                <br>
-            </fieldset>
-        </form>
-    </body>
+    <meta charset="UTF-8">
+    <title>Improved HTML Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 30px;
+        }
+
+        form {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            font-size: 1.2em;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        input[type="date"],
+        input[type="color"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-group label,
+        .radio-group label {
+            font-weight: normal;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="John Doe" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@example.com" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="number" id="phone" placeholder="1234567890" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" placeholder="123 Main Street">
+
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label for="country">Country</label>
+            <select id="country">
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>China</option>
+                <option>Russia</option>
+                <option>Japan</option>
+            </select>
+
+            <label>Skills</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="skills" value="Cooking"> Cooking</label>
+                <label><input type="checkbox" name="skills" value="Coding"> Coding</label>
+                <label><input type="checkbox" name="skills" value="Painting"> Painting</label>
+                <label><input type="checkbox" name="skills" value="Dancing"> Dancing</label>
+                <label><input type="checkbox" name="skills" value="Singing"> Singing</label>
+            </div>
+
+            <label for="blood">Blood Type</label>
+            <select id="blood">
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+            </select>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+        </fieldset>
+
+        <!-- Academic Details -->
+        <fieldset>
+            <legend>Academic Details</legend>
+
+            <label for="grade">Grade</label>
+            <select id="grade">
+                <option>Grade 1</option>
+                <option>Grade 2</option>
+                <option>Grade 3</option>
+                <option>Grade 4</option>
+                <option>Grade 5</option>
+                <option>Grade 6</option>
+                <option>Grade 7</option>
+                <option>Grade 8</option>
+                <option>Grade 9</option>
+                <option>Grade 10</option>
+                <option>Grade 11</option>
+                <option>Grade 12</option>
+            </select>
+
+            <label for="school">School Name</label>
+            <input type="text" id="school" placeholder="Your School Name">
+
+            <label>Club Choice</label>
+            <div class="radio-group">
+                <label><input type="radio" name="club" value="Science"> Science</label>
+                <label><input type="radio" name="club" value="Math"> Math</label>
+                <label><input type="radio" name="club" value="Sports"> Sports</label>
+                <label><input type="radio" name="club" value="Arts"> Arts</label>
+                <label><input type="radio" name="club" value="Music"> Music</label>
+            </div>
+
+            <label for="subject">Favorite Subject</label>
+            <input type="text" id="subject" placeholder="Math, Science, etc.">
+
+            <label for="hobbies">Hobbies</label>
+            <input type="text" id="hobbies" placeholder="Reading, Drawing, etc.">
+        </fieldset>
+
+        <!-- Other Information -->
+        <fieldset>
+            <legend>Other Information</legend>
+
+            <label for="color">Favorite Color</label>
+            <input type="color" id="color">
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob">
+
+            <label for="family">Number of People in Family</label>
+            <input type="number" id="family" min="1">
+
+            <label for="pets">Do You Have Any Pets?</label>
+            <input type="text" id="pets" placeholder="Yes, a dog / No">
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
 </html>
